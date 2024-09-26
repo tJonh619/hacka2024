@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Texto de Bienvenida -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="¡BIENVENIDO!"
+        android:textColor="#1E88E5"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Nombre de usuario -->
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="RICHARD MANUEL"
+        android:textColor="#666666"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText" />
+
+    <!-- Icono de perfil -->
+<ImageView
+android:id="@+id/profileIcon"
+android:layout_width="40dp"
+android:layout_height="40dp"
+android:layout_marginTop="40dp"
+android:layout_marginEnd="16dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Tarjeta de Citas -->
+<LinearLayout
+android:id="@+id/citasCard"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:background="@drawable/rounded_card_background"
+android:padding="16dp"
+app:layout_constraintTop_toBottomOf="@id/userName"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginTop="16dp"
+android:layout_marginStart="16dp"
+android:layout_marginEnd="16dp">
+
+<!-- Título de la tarjeta -->
+<TextView
+    android:id="@+id/citasTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="CITAS"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:textColor="@color/white" />
+
+<!-- Descripción -->
+<TextView
+    android:id="@+id/citasDescription"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Tu próxima cita es el 02/10/24"
+    android:textColor="@color/white"
+    android:layout_marginTop="8dp" />
+
+<!-- Más información de la cita -->
+<TextView
+    android:id="@+id/citasInfo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hospital Occidental de Managua"
+    android:textColor="@color/white"
+    android:layout_marginTop="8dp" />
+
+<!-- Área de la cita -->
+<TextView
+    android:id="@+id/citasArea"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Área: Urología Clínica 16"
+    android:textColor="@color/white"
+    android:layout_marginTop="4dp" />
+
+<!-- Icono de información adicional -->
+<ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_gravity="end"
+    android:layout_marginTop="8dp" />
+</LinearLayout>
+
+    <!-- Tarjeta de Medicinas -->
+<LinearLayout
+android:id="@+id/medicinasCard"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:background="@drawable/rounded_card_background"
+android:padding="16dp"
+app:layout_constraintTop_toBottomOf="@id/citasCard"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginTop="16dp"
+android:layout_marginStart="16dp"
+android:layout_marginEnd="16dp">
+
+<!-- Título de la tarjeta -->
+<TextView
+    android:id="@+id/medicinasTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="MEDICINAS"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:textColor="@color/white" />
+
+<!-- Descripción -->
+<TextView
+    android:id="@+id/medicinasDescription"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Se aproxima tu dosis de Ácido zoledrónico"
+    android:textColor="@color/white"
+    android:layout_marginTop="8dp" />
+
+<!-- Icono de información adicional -->
+<ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_gravity="end"
+    android:layout_marginTop="8dp" />
+</LinearLayout>
+
+    <!-- Tarjeta de Progreso -->
+<LinearLayout
+android:id="@+id/progresoCard"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:background="@drawable/rounded_card_background"
+android:padding="16dp"
+app:layout_constraintTop_toBottomOf="@id/medicinasCard"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginTop="16dp"
+android:layout_marginStart="16dp"
+android:layout_marginEnd="16dp">
+
+<!-- Título de la tarjeta -->
+<TextView
+    android:id="@+id/progresoTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="¡INCREÍBLE!"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:textColor="@color/white" />
+
+<!-- Descripción -->
+<TextView
+    android:id="@+id/progresoPercentage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Haz avanzado más del 70% de tu tratamiento"
+    android:textColor="@color/white"
+    android:layout_marginTop="8dp" />
+
+<!-- Icono de información adicional -->
+<ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_gravity="end"
+    android:layout_marginTop="8dp" />
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/infoPacCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_card_background"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/progresoCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <!-- Título de la tarjeta -->
+        <TextView
+            android:id="@+id/infopacTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Gestiona tus datos!"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/detailsinfoCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Haz avanzado más del 70% de tu tratamiento"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp" />
+
+        <!-- Icono de información adicional -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+    <!-- Barra de navegación inferior -->
+<LinearLayout
+android:id="@+id/navigationBar"
+android:layout_width="0dp"
+android:layout_height="56dp"
+android:orientation="horizontal"
+android:background="@color/white"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:weightSum="5">
+
+<!-- Iconos de la barra de navegación -->
+<ImageView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_gravity="center" />
+
+<!-- Repite para otros iconos -->
+</LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

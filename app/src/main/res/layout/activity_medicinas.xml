@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0091ec"
+    tools:context=".MedicinaActivity">
+
+    <!-- Header -->
+
+    <!-- Medication Card -->
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="MEDICINAS"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+android:id="@+id/medicationCard"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:layout_marginStart="16dp"
+android:layout_marginEnd="16dp"
+app:cardCornerRadius="16dp"
+app:cardElevation="8dp"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/header">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/medicationInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Se aproxima tu dosis de Ácido zoledrónico a las 16:00hrs"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif-light" />
+
+    <TextView
+        android:id="@+id/dosageInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="02 TABLETAS, DOSIS CADA 6HRS. 800mg"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    <!-- Slider Indicator -->
+<LinearLayout
+android:id="@+id/sliderIndicator"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+android:gravity="center"
+android:orientation="horizontal"
+app:layout_constraintTop_toBottomOf="@+id/medicationCard"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent">
+
+<View
+    android:layout_width="16dp"
+    android:layout_height="16dp"
+    android:layout_margin="4dp"/>
+
+<View
+    android:layout_width="16dp"
+    android:layout_height="16dp"
+    android:layout_margin="4dp" />
+
+<View
+    android:layout_width="16dp"
+    android:layout_height="16dp"
+    android:layout_margin="4dp"/>
+</LinearLayout>
+
+    <!-- Reminder Card -->
+<androidx.cardview.widget.CardView
+android:id="@+id/reminderCard"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:layout_marginStart="16dp"
+android:layout_marginEnd="16dp"
+app:cardCornerRadius="16dp"
+app:cardElevation="8dp"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/sliderIndicator">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/remindMeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RECORDARME"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Timer Inputs -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_card_background"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="00"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_card_background"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="10"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/seconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_card_background"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="00"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Before Button -->
+    <TextView
+        android:id="@+id/beforeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ANTES"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center" />
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
